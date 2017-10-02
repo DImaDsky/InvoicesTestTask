@@ -4,9 +4,22 @@
   "private": true,
   "dependencies": {
     "body-parser": "1.15.0",
+    "bower": "^1.8.0",
+    "eslint": "^4.6.1",
+    "eslint-plugin-angular": "^3.1.1",
     "express": "~4.13.4",
+    "lodash": "latest",
     "sequelize": "^3.20.0",
-    "sqlite3": "latest",
-    "lodash": "latest"
+    "sqlite3": "latest"
+  },
+  "scripts": {
+    "start": "npm install && bower install"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

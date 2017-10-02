@@ -1,0 +1,8 @@
+<ul class="list-unstyled">
+    <li ng-repeat="item in $ctrl.products">
+        {{item.id}} -
+        <a data-ui-sref="product_edit({id:{{item.id}}})">{{item.name}}</a>
+        ({{item.price}})
+    </li>
+</ul>
+

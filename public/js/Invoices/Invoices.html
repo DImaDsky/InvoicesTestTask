@@ -1,0 +1,7 @@
+<ul class="list-unstyled">
+    <li ng-repeat="inv in vm.invoices">
+        Invoice {{inv.id}}
+        <a data-ui-sref="invoices_edit({id:{{inv.id}}})">Edit</a>
+    </li>
+</ul>
+<button type="button" class="btn btn-default" data-ui-sref="invoices_edit({id:'new'})">Add new</button>

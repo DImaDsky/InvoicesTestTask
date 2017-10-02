@@ -1,0 +1,23 @@
+<div>
+    <label>Products</label>
+    <div ng-hide="$ctrl.invoiceId>0">Choose customer before adding products</div>
+    <fieldset ng-repeat="item in $ctrl.invoiceItems" class="form-group" ng-show="$ctrl.invoiceId>0">
+        <div class="form-inline">
+            <div class="form-group">
+                <select class="form-control" ng-model="item.product" ng-change="$ctrl.changeProductField(item)"
+                        ng-options="product.name for product in $ctrl.products" ng-init="item.product">
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control product-input" value="{{(item.product.price || 0) + ' $'}}"
+                       disabled>
+                <input type="number" placeholder="Quantity" class="form-control product-input"
+                       ng-model="item.quantity" ng-change="$ctrl.changeProductField(item)"
+                       ng-model-options="{debounce: 800}">
+
+                <button class="btn btn-default remove" ng-click="$ctrl.removeProductField(item)">-</button>
+                <button class="btn btn-default add" ng-click="$ctrl.addProductField()">+</button>
+            </div>
+        </div>
+    </fieldset>
+</div>

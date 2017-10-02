@@ -1,0 +1,14 @@
+/*.message-block{
+    position: fixed;
+    border: 1px solid red;
+    z-index: 100;
+    left: 100px;
+    top: 100px;
+}*/
+.product-input{
+    max-width: 100px;
+    display: inline-block;
+}
+/*@media (min-width: 768px){
+
+}*/

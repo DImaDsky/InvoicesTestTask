@@ -1,0 +1,24 @@
+{
+  "name": "interviewed-angular",
+  "description": "",
+  "main": "",
+  "authors": [
+    "dimadsky@gmail.com <dimadsky@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-resource": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-messages": "^1.6.6",
+    "angular-ui-router": "^1.0.6"
+  }
+}

@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css">
   </head>
-  <body>
-
+  <body ng-app="invApp">
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -25,19 +24,40 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Invoices</a></li>
+            <li><a data-ui-sref="products" data-ui-sref-active="menu-active">Products</a></li>
+            <li><a data-ui-sref="customers" data-ui-sref-active="menu-active">Customers</a></li>
+            <li><a data-ui-sref="invoices" data-ui-sref-active="menu-active">Invoices</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-      
+      <div ng-view></div>
+      <ui-view></ui-view>
     </div> <!-- /container -->
 
     <script type="text/javascript" src="/js/lib/jquery/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/productsListComponent/ProductsList.js"></script>
+    <script type="text/javascript" src="/js/productEditComponent/ProductEdit.js"></script>
+    <script type="text/javascript" src="/js/Invoices/InvoicesCtrl.js"></script>
+    <script type="text/javascript" src="/js/Customers/CustomersCtrl.js"></script>
+    <script type="text/javascript" src="/js/Services/ShareData.js"></script>
+    <script type="text/javascript" src="/js/Services/InvoicesService.js"></script>
+    <script type="text/javascript" src="/js/Services/ProductsService.js"></script>
+    <script type="text/javascript" src="/js/Services/CustomersService.js"></script>
+    <script type="text/javascript" src="/js/Services/InvoiceItemsService.js"></script>
+
+    <script type="text/javascript" src="/js/InvoiceEditComponent/InvoiceEdit.js"></script>
+    <script type="text/javascript" src="/js/productsComponent/Products.js"></script>
+
+
   </body>
 </html>
